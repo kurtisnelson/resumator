@@ -1,5 +1,6 @@
 source "http://rubygems.org"
 gem "faraday", ">= 0.8.4"
+gem "hashie"
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.

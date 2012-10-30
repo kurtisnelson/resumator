@@ -1,4 +1,7 @@
 require 'faraday'
+require 'json'
+require 'hashie'
+
 module Resumator
   class Client
     def initialize(key)
@@ -14,11 +17,21 @@ module Resumator
 
     def jobs(options = {})
       if options[:id]
-        @connection.get "jobs/#{options[:id]}"
+        resp = @connection.get "jobs/#{options[:id]}"
       elsif options.size > 0
-        @connection.get "jobs#{Client.parse_options(options)}"
+        resp = @connection.get "jobs#{Client.parse_options(options)}"
       else
-        @connection.get "jobs"
+        resp = @connection.get "jobs"
+      end
+      raise "Bad response: #{resp.status}" unless resp.status == 200
+      Client.mash(JSON.parse(resp.body))
+    end
+
+    def self.mash(response)
+      if response.is_a? Array
+        return response.map{|o| Hashie::Mash.new(o)}
+      else
+        return Hashie::Mash.new(response)
       end
     end
 

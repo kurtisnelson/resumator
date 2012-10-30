@@ -17,18 +17,19 @@ describe Resumator::Client do
     let(:client) {Resumator::Client.new(ENV['RESUMATOR_KEY'])}
     
     it "gets jobs" do
-      response = client.jobs
-      response.status.should eq(200)
+      data = client.jobs
+      data.count.should > 1
     end
 
     it "gets specific job" do
-      response = client.jobs(id: "job_20120813143226_ILMRNXT9G3WBYENQ")
-      response.status.should eq(200)
+      ID = "job_20120813143226_ILMRNXT9G3WBYENQ"
+      data = client.jobs(id: ID)
+      data.id.should eq ID
     end
 
     it "searches by options" do
-      response = client.jobs(city: "Atlanta")
-      response.status.should eq(200)
+      data = client.jobs(city: "Atlanta")
+      data.first.city.should eq "Atlanta"
     end
   end
 end
