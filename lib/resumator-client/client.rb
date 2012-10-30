@@ -14,6 +14,9 @@ module Resumator
         faraday.request  :url_encoded             # form-encode POST params
         faraday.response :logger if ENV['DEBUG']
         faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
+        faraday.request :retry, 2
+        faraday.options[:timeout] = 2           # open/read timeout in seconds
+        faraday.options[:open_timeout] = 2      # connection open timeout in seconds
       end
       @connection.params['apikey'] = @api_key
     end
