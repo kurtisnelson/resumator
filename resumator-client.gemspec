@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
     "spec/spec_helper.rb",
     "spec/unit/client_spec.rb"
   ]
-  s.homepage = "http://github.com/kurtisnelson/resumator-client"
+  s.homepage = "http://github.com/kurtisnelson/resumator"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.24"
