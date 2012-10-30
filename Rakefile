@@ -18,7 +18,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/kurtisnelson/resumator"
   gem.license = "MIT"
   gem.summary = %Q{Access the resumator API}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.description = %Q{Use the RESTful API found at resumatorapi.com}
   gem.email = "kurtisnelson@gmail.com"
   gem.authors = ["Kurt Nelson"]
   # dependencies defined in Gemfile

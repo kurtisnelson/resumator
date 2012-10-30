@@ -1,5 +1,6 @@
 #Resumator
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/kurtisnelson/resumator) [![Build Status](https://secure.travis-ci.org/kurtisnelson/resumator.png?branch=master)](http://travis-ci.org/kurtisnelson/resumator)
+
 Communicates with the resumator API
 
 ##Contributing to resumator
@@ -11,6 +12,8 @@ Communicates with the resumator API
 * Commit and push until you are happy with your contribution.
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+If you want messages from Faraday, set DEBUG in your environment to true.
 
 ##Copyright
 
