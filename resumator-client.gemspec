@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
     "VERSION",
     "lib/resumator-client.rb",
     "lib/resumator-client/client.rb",
-    "resumator.gemspec",
+    "resumator-client.gemspec",
     "spec/fixtures/vcr_cassettes/request.yml",
     "spec/request/resumator_client_spec.rb",
     "spec/spec_helper.rb",
