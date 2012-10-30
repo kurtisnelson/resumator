@@ -13,7 +13,7 @@ Communicates with the resumator API
   resp = client.jobs
   puts resp[0].title
   resp = client.jobs(id: resp[0].id)
-  ``
+  ```
 
 Any of the parameters listed in the [API docs](http://www.resumatorapi.com/v1/) should be supported.
 
