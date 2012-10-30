@@ -1,11 +1,14 @@
 #Resumator
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/kurtisnelson/resumator) [![Build Status](https://secure.travis-ci.org/kurtisnelson/resumator.png?branch=master)](http://travis-ci.org/kurtisnelson/resumator)
+[Documentation](http://rubydoc.info/gems/resumator-client/)
 
 Communicates with the resumator API
 
 ##Usage
 
-  ``ruby
+  `gem install resumator-client`
+
+  ```ruby
   client = Resumator::Client.new(APIKEY)
   resp = client.jobs
   puts resp[0].title
