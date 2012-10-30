@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.resumatorapi.com/v1/activities/object_id/prospect_20120920202531_GLLJFJ5ES0WFOJFL/category/resume_status?apikey=<RESUMATOR_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 30 Oct 2012 18:29:20 GMT
+      Server:
+      - nginx/1.0.15
+      X-Powered-By:
+      - PHP/5.3.3
+      Content-Length:
+      - '752'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":"activity_20120926143642_XAJ5GJI5PP6JH6QX","category":"resume_status","team_id":"","user_id":"usr_20110609133428_29RPHSXHAKEY2ZXG","object_id":"prospect_20120920202531_GLLJFJ5ES0WFOJFL","action":"Charles
+        Quinn changed the status of applicant from \"Reviewed\" to \"Phone
+        Screened\" for the job \"Web Application Developer\".","date":"2012-09-26","time":"14:36:42"},{"id":"activity_20120921192110_XR6TWCHZ2SEIUGO6","category":"resume_status","team_id":"","user_id":"usr_20110609133428_29RPHSXHAKEY2ZXG","object_id":"prospect_20120920202531_GLLJFJ5ES0WFOJFL","action":"Charles
+        Quinn changed the status of applicant from \"New\" to \"Reviewed\"
+        for the job \"Web Application Developer\".","date":"2012-09-21","time":"19:21:10"}]'
+    http_version: 
+  recorded_at: Tue, 30 Oct 2012 18:29:20 GMT
+recorded_with: VCR 2.2.5

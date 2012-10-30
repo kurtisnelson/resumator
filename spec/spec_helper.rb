@@ -14,6 +14,7 @@ ENV['RESUMATOR_TEST_KEY'] = "BxO624TAeatcdZfsugE45vNtiMpW28vJ" unless ENV['RESUM
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   c.hook_into :webmock # or :fakeweb
+  c.filter_sensitive_data('<RESUMATOR_API_KEY>') { ENV['RESUMATOR_TEST_KEY'] }
 end
 RSpec.configure do |config|
 
