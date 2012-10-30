@@ -3,6 +3,17 @@
 
 Communicates with the resumator API
 
+##Usage
+
+  ``ruby
+  client = Resumator::Client.new(APIKEY)
+  resp = client.jobs
+  puts resp[0].title
+  resp = client.jobs(id: resp[0].id)
+  ``
+
+Any of the parameters listed in the [API docs](http://www.resumatorapi.com/v1/) should be supported.
+
 ##Contributing to resumator
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.

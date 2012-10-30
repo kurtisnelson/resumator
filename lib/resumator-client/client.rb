@@ -4,6 +4,9 @@ require 'hashie'
 
 module Resumator
   class Client
+    # Sets up a client
+    #
+    # @param [String] API key
     def initialize(key)
       raise "Missing API key" unless key and not key.empty?
       @api_key = key
@@ -15,6 +18,11 @@ module Resumator
       @connection.params['apikey'] = @api_key
     end
 
+    # Get any rest accessible object
+    #
+    # @param [String] object name
+    # @param [Hash] optional search parameters
+    # @return [Mash] your data
     def get(object, options = {})
       if options[:id]
         resp = @connection.get "#{object}/#{options[:id]}"
@@ -51,6 +59,7 @@ module Resumator
       get("tasks", options)
     end
 
+    private
     def self.mash(response)
       if response.is_a? Array
         return response.map{|o| Hashie::Mash.new(o)}
