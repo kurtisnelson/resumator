@@ -15,6 +15,18 @@ describe Resumator::Activities do
         data.first.from.should_not be nil
         data.first.to.should_not be nil
     end
+
+    it "can handle an empty response" do
+      Resumator::Client.any_instance.stub(:activities) { [] }
+      data = subject.status_history("stupidValue")
+      data.count.should be 0
+    end
+
+    it "can handle a hash response" do
+      Resumator::Client.any_instance.stub(:activities) { {"action" => "\"Word\" space \"More\" space \"Cool Job\"", "time" => "noon", "date" => "yesterday"} }
+      data = subject.status_history("badValue")
+      data.first.time.should eq "noon"
+    end
   end
 
 

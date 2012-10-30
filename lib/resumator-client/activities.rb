@@ -9,6 +9,7 @@ module Resumator
 
     def status_history(obj_id)
       resp = @client.activities(object_id: obj_id, category: "resume_status")
+      resp = [resp] if resp.is_a? Hash # If there is only one activity, it comes back on its own not in an array.
       history = []
       resp.each do |r|
         data = r["action"].scan /"([^"]+)"/
