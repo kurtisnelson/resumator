@@ -1,0 +1,124 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.resumatorapi.com/v1/jobs?apikey=BxO624TAeatcdZfsugE45vNtiMpW28vJ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 30 Oct 2012 16:13:36 GMT
+      Server:
+      - nginx/1.0.15
+      X-Powered-By:
+      - PHP/5.3.3
+      Content-Length:
+      - '401'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":"job_20121030151055_ZK0WBF7NK8WXCWLA","team_id":"team_20121030153324_OY9P9H4Y3WSMSIIW","title":"Sample
+        Job","country_id":"C1","city":"Pittsburgh","state":"PA","zip":"O5212","minimum_salary":"C0000","maximum_salary":"C5000","notes":"I
+        like turtles.","original_open_date":"D012-10-30","status":"O","send_to_job_boards":"N","hiring_lead":"usr_20121030151055_TNAW6JCZNH0SYEHE","board_code":"qugheP"}'
+    http_version: 
+  recorded_at: Tue, 30 Oct 2012 16:13:48 GMT
+- request:
+    method: get
+    uri: https://api.resumatorapi.com/v1/jobs/job_20121030151055_ZK0WBF7NK8WXCWLA?apikey=BxO624TAeatcdZfsugE45vNtiMpW28vJ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 30 Oct 2012 16:13:36 GMT
+      Server:
+      - nginx/1.0.15
+      X-Powered-By:
+      - PHP/5.3.3
+      Content-Length:
+      - '778'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":"job_20121030151055_ZK0WBF7NK8WXCWLA","team_id":"team_20121030153324_OY9P9H4Y3WSMSIIW","title":"Sample
+        Job","country_id":"United States","city":"Pittsburgh","state":"PA","zip":"15212","description":"<p>\r\nYou
+        can enter a detailed, formatted description of your position.<\/p>\r\n<p>\r\nWe
+        have a fully featured WYSIWYG editor which enables you to craft that perfectly
+        formatted bulleted list. So go get that new candidate!<\/p>\r\n","minimum_salary":"60000","maximum_salary":"65000","notes":"I
+        like turtles.","original_open_date":"2012-10-30","status":"On Hold","send_to_job_boards":"No
+        answer","hiring_lead":"usr_20121030151055_TNAW6JCZNH0SYEHE","board_code":"qugheP","job_applicants":{"prospect_id":"prospect_20121030151055_BKTQHUTGXV4FGQVS","apply_date":"2012-10-30"}}'
+    http_version: 
+  recorded_at: Tue, 30 Oct 2012 16:13:48 GMT
+- request:
+    method: get
+    uri: https://api.resumatorapi.com/v1/jobs/city/Pittsburgh?apikey=BxO624TAeatcdZfsugE45vNtiMpW28vJ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 30 Oct 2012 16:13:36 GMT
+      Server:
+      - nginx/1.0.15
+      X-Powered-By:
+      - PHP/5.3.3
+      Content-Length:
+      - '401'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":"job_20121030151055_ZK0WBF7NK8WXCWLA","team_id":"team_20121030153324_OY9P9H4Y3WSMSIIW","title":"Sample
+        Job","country_id":"C1","city":"Pittsburgh","state":"PA","zip":"O5212","minimum_salary":"C0000","maximum_salary":"C5000","notes":"I
+        like turtles.","original_open_date":"D012-10-30","status":"O","send_to_job_boards":"N","hiring_lead":"usr_20121030151055_TNAW6JCZNH0SYEHE","board_code":"qugheP"}'
+    http_version: 
+  recorded_at: Tue, 30 Oct 2012 16:13:48 GMT
+recorded_with: VCR 2.2.5

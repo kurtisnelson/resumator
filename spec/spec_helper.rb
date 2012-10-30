@@ -10,7 +10,7 @@ require 'vcr'
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
-RESUMATOR_KEY = ENV['RESUMATOR_KEY']
+ENV['RESUMATOR_TEST_KEY'] = "BxO624TAeatcdZfsugE45vNtiMpW28vJ" unless ENV['RESUMATOR_TEST_KEY']
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   c.hook_into :webmock # or :fakeweb

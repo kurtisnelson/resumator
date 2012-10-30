@@ -8,13 +8,13 @@ describe Resumator::Client do
   end
 
   it "is initialized with an API key" do
-    client = Resumator::Client.new(ENV['RESUMATOR_KEY'])
+    client = Resumator::Client.new(ENV['RESUMATOR_TEST_KEY'])
   end
 
   specify{ expect {client = Resumator::Client.new("")}.to raise_error}
 
   context "valid client" do
-    let(:client) {Resumator::Client.new(ENV['RESUMATOR_KEY'])}
+    let(:client) {Resumator::Client.new(ENV['RESUMATOR_TEST_KEY'])}
     
     it "gets jobs" do
       data = client.jobs
@@ -22,14 +22,14 @@ describe Resumator::Client do
     end
 
     it "gets specific job" do
-      ID = "job_20120813143226_ILMRNXT9G3WBYENQ"
+      ID = "job_20121030151055_ZK0WBF7NK8WXCWLA"
       data = client.jobs(id: ID)
       data.id.should eq ID
     end
 
     it "searches by options" do
-      data = client.jobs(city: "Atlanta")
-      data.first.city.should eq "Atlanta"
+      data = client.jobs(city: "Pittsburgh")
+      data.city.should eq "Pittsburgh"
     end
   end
 end
