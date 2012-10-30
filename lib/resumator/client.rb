@@ -35,6 +35,22 @@ module Resumator
       get("jobs", options)
     end
 
+    def activities(options = {})
+      get("activities", options)
+    end
+
+    def contents(options = {})
+      get("contents", options)
+    end
+
+    def users(options = {})
+      get("users", options)
+    end
+
+    def tasks(options = {})
+      get("tasks", options)
+    end
+
     def self.mash(response)
       if response.is_a? Array
         return response.map{|o| Hashie::Mash.new(o)}
