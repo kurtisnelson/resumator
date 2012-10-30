@@ -12,8 +12,22 @@ module Resumator
       @connection.params['apikey'] = @api_key
     end
 
-    def jobs
-      @connection.get 'jobs'
+    def jobs(options = {})
+      if options[:id]
+        @connection.get "jobs/#{options[:id]}"
+      elsif options.size > 0
+        @connection.get "jobs#{Client.parse_options(options)}"
+      else
+        @connection.get "jobs"
+      end
+    end
+
+    def self.parse_options(options = {})
+      out = ""
+      for k, v in options do
+        out << "/#{k}/#{v}"
+      end
+      out
     end
   end
 end
