@@ -1,5 +1,12 @@
 require_relative '../spec_helper'
 describe Resumator::Client do
+  before :all do
+    VCR.insert_cassette "request"
+  end
+  after :all do
+    VCR.eject_cassette
+  end
+
   it "is initialized with an API key" do
     client = Resumator::Client.new(ENV['RESUMATOR_KEY'])
   end
