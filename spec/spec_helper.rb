@@ -4,7 +4,7 @@ require 'simplecov'
 SimpleCov.start
 require 'pry'
 require 'rspec'
-require 'resumator'
+require 'resumator-client'
 require 'vcr'
 
 # Requires supporting files with custom matchers and macros, etc,

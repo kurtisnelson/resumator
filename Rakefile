@@ -14,8 +14,8 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "resumator"
-  gem.homepage = "http://github.com/kurtisnelson/resumator"
+  gem.name = "resumator-client"
+  gem.homepage = "http://github.com/kurtisnelson/resumator-client"
   gem.license = "MIT"
   gem.summary = %Q{Access the resumator API}
   gem.description = %Q{Use the RESTful API found at resumatorapi.com}
