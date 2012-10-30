@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "resumator-client"
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kurt Nelson"]
@@ -26,11 +26,14 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "lib/resumator-client.rb",
+    "lib/resumator-client/activities.rb",
     "lib/resumator-client/client.rb",
     "resumator-client.gemspec",
+    "spec/fixtures/vcr_cassettes/activities.yml",
     "spec/fixtures/vcr_cassettes/request.yml",
     "spec/request/resumator_client_spec.rb",
     "spec/spec_helper.rb",
+    "spec/unit/activities_spec.rb",
     "spec/unit/client_spec.rb"
   ]
   s.homepage = "http://github.com/kurtisnelson/resumator"
