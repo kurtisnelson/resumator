@@ -15,21 +15,23 @@ describe Resumator::Client do
 
   context "valid client" do
     let(:client) {Resumator::Client.new(ENV['RESUMATOR_TEST_KEY'])}
-    
-    it "gets jobs" do
-      data = client.jobs
-      data.count.should > 1
-    end
 
-    it "gets specific job" do
-      ID = "job_20121030151055_ZK0WBF7NK8WXCWLA"
-      data = client.jobs(id: ID)
-      data.id.should eq ID
-    end
+    describe "#get" do
+      it "gets objects" do
+        data = client.get "jobs"
+        data.count.should > 1
+      end
 
-    it "searches by options" do
-      data = client.jobs(city: "Pittsburgh")
-      data.city.should eq "Pittsburgh"
+      it "gets specific job" do
+        ID = "job_20121030151055_ZK0WBF7NK8WXCWLA"
+        data = client.get "jobs", {id: ID}
+        data.id.should eq ID
+      end
+
+      it "searches by options" do
+        data = client.get "jobs", {city: "Pittsburgh"}
+        data.city.should eq "Pittsburgh"
+      end
     end
   end
 end

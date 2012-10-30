@@ -15,16 +15,24 @@ module Resumator
       @connection.params['apikey'] = @api_key
     end
 
-    def jobs(options = {})
+    def get(object, options = {})
       if options[:id]
-        resp = @connection.get "jobs/#{options[:id]}"
+        resp = @connection.get "#{object}/#{options[:id]}"
       elsif options.size > 0
-        resp = @connection.get "jobs#{Client.parse_options(options)}"
+        resp = @connection.get "#{object}#{Client.parse_options(options)}"
       else
-        resp = @connection.get "jobs"
+        resp = @connection.get object
       end
       raise "Bad response: #{resp.status}" unless resp.status == 200
       Client.mash(JSON.parse(resp.body))
+    end
+
+    def applicants(options = {})
+      get("applicants", options)
+    end
+
+    def jobs(options = {})
+      get("jobs", options)
     end
 
     def self.mash(response)
