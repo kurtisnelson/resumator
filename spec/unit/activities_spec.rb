@@ -11,9 +11,11 @@ describe Resumator::Activities do
   subject{Resumator::Activities.new(Resumator::Client.new(ENV['RESUMATOR_TEST_KEY']))}
   describe "#status_history" do
     it "doesn't explode" do
-        data = subject.status_history("prospect_20120920202531_GLLJFJ5ES0WFOJFL")
+      data = subject.status_history("prospect_20120920202531_GLLJFJ5ES0WFOJFL")
+      if data.count > 0
         data.first.from.should_not be nil
         data.first.to.should_not be nil
+      end
     end
 
     it "can handle an empty response" do

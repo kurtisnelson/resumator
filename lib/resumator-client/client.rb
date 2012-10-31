@@ -27,15 +27,27 @@ module Resumator
     # @param [Hash] optional search parameters
     # @return [Mash] your data
     def get(object, options = {})
-      if options[:id]
-        resp = @connection.get "#{object}/#{options[:id]}"
-      elsif options.size > 0
-        resp = @connection.get "#{object}#{Client.parse_options(options)}"
+      if options[:all_pages]
+        options[:all_pages] = false
+        options[:page] = 1
+        out = []
+        begin
+          data = get(object, options)
+          out << data
+          options[:page] += 1
+        end while data.count == 100
+        return out
       else
-        resp = @connection.get object
+        if options[:id]
+          resp = @connection.get "#{object}/#{options[:id]}"
+        elsif options.size > 0
+          resp = @connection.get "#{object}#{Client.parse_options(options)}"
+        else
+          resp = @connection.get object
+        end
+        raise "Bad response: #{resp.status}" unless resp.status == 200
+        Client.mash(JSON.parse(resp.body))
       end
-      raise "Bad response: #{resp.status}" unless resp.status == 200
-      Client.mash(JSON.parse(resp.body))
     end
 
     def applicants(options = {})
