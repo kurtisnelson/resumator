@@ -28,14 +28,14 @@ module Resumator
     # @return [Mash] your data
     def get(object, options = {})
       if options[:all_pages]
-        options[:all_pages] = false
+        options.delete(:all_pages)
         options[:page] = 1
         out = []
         begin
           data = get(object, options)
-          out << data
+          out = out | data
           options[:page] += 1
-        end while data.count == 100
+        end while data.count >= 100
         return out
       else
         if options[:id]
@@ -79,7 +79,7 @@ module Resumator
       if response.is_a? Array
         return response.map{|o| Hashie::Mash.new(o)}
       else
-        return Hashie::Mash.new(response)
+        return [Hashie::Mash.new(response)]
       end
     end
 

@@ -19,18 +19,23 @@ describe Resumator::Client do
     describe "#get" do
       it "gets objects" do
         data = client.get "jobs"
-        data.count.should > 1
+        data.count.should >= 1
+      end
+
+      it "gets all the pages" do
+        data = client.get "applicants", all_pages: true
+        data.count.should >= 1
       end
 
       it "gets specific job" do
         ID = "job_20121030151055_ZK0WBF7NK8WXCWLA"
         data = client.get "jobs", {id: ID}
-        data.id.should eq ID
+        data.first.id.should eq ID
       end
 
       it "searches by options" do
         data = client.get "jobs", {city: "Pittsburgh"}
-        data.city.should eq "Pittsburgh"
+        data.first.city.should eq "Pittsburgh"
       end
     end
   end

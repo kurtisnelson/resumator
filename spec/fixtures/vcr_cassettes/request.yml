@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 31 Oct 2012 14:55:47 GMT
+      - Wed, 31 Oct 2012 15:10:19 GMT
       Server:
       - nginx/1.0.15
       X-Powered-By:
@@ -38,7 +38,45 @@ http_interactions:
         Job","country_id":"C1","city":"Pittsburgh","state":"PA","zip":"O5212","minimum_salary":"C0000","maximum_salary":"C5000","notes":"I
         like turtles.","original_open_date":"D012-10-30","status":"O","send_to_job_boards":"N","hiring_lead":"usr_20121030151055_TNAW6JCZNH0SYEHE","board_code":"qugheP"}'
     http_version: 
-  recorded_at: Wed, 31 Oct 2012 14:55:50 GMT
+  recorded_at: Wed, 31 Oct 2012 15:10:22 GMT
+- request:
+    method: get
+    uri: https://api.resumatorapi.com/v1/applicants/page/1?apikey=<RESUMATOR_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 31 Oct 2012 15:10:19 GMT
+      Server:
+      - nginx/1.0.15
+      X-Powered-By:
+      - PHP/5.3.3
+      Content-Length:
+      - '221'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":"prospect_20121030151055_BKTQHUTGXV4FGQVS","first_name":"Neil","last_name":"Peart","prospect_phone":"1-888-353-0887","apply_date":"2012-10-30","job_id":"job_20121030151055_ZK0WBF7NK8WXCWLA","job_title":"Sample
+        Job"}'
+    http_version: 
+  recorded_at: Wed, 31 Oct 2012 15:10:22 GMT
 - request:
     method: get
     uri: https://api.resumatorapi.com/v1/jobs/job_20121030151055_ZK0WBF7NK8WXCWLA?apikey=<RESUMATOR_API_KEY>
@@ -62,7 +100,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 31 Oct 2012 14:55:47 GMT
+      - Wed, 31 Oct 2012 15:10:19 GMT
       Server:
       - nginx/1.0.15
       X-Powered-By:
@@ -81,7 +119,7 @@ http_interactions:
         like turtles.","original_open_date":"2012-10-30","status":"On Hold","send_to_job_boards":"No
         answer","hiring_lead":"usr_20121030151055_TNAW6JCZNH0SYEHE","board_code":"qugheP","job_applicants":{"prospect_id":"prospect_20121030151055_BKTQHUTGXV4FGQVS","apply_date":"2012-10-30"}}'
     http_version: 
-  recorded_at: Wed, 31 Oct 2012 14:55:50 GMT
+  recorded_at: Wed, 31 Oct 2012 15:10:22 GMT
 - request:
     method: get
     uri: https://api.resumatorapi.com/v1/jobs/city/Pittsburgh?apikey=<RESUMATOR_API_KEY>
@@ -105,7 +143,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 31 Oct 2012 14:55:47 GMT
+      - Wed, 31 Oct 2012 15:10:20 GMT
       Server:
       - nginx/1.0.15
       X-Powered-By:
@@ -120,5 +158,5 @@ http_interactions:
         Job","country_id":"C1","city":"Pittsburgh","state":"PA","zip":"O5212","minimum_salary":"C0000","maximum_salary":"C5000","notes":"I
         like turtles.","original_open_date":"D012-10-30","status":"O","send_to_job_boards":"N","hiring_lead":"usr_20121030151055_TNAW6JCZNH0SYEHE","board_code":"qugheP"}'
     http_version: 
-  recorded_at: Wed, 31 Oct 2012 14:55:50 GMT
+  recorded_at: Wed, 31 Oct 2012 15:10:22 GMT
 recorded_with: VCR 2.2.5

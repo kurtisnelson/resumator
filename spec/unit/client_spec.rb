@@ -6,11 +6,11 @@ describe Resumator::Client do
     Resumator::Client.parse_options(options).should eq("/city/Atlanta/state/GA")
   end
 
-  it "turns a single hash into a mash" do
+  it "turns a single hash into a mash array" do
     data = {id: 1, name: "Bob"}
     mash = Resumator::Client.mash(data)
-    mash.id.should eq 1
-    mash.name.should eq "Bob"
+    mash.first.id.should eq 1
+    mash.first.name.should eq "Bob"
   end
 
   it "turns an array of hashes into a mash array" do
