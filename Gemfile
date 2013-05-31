@@ -1,4 +1,6 @@
 source "http://rubygems.org"
+ruby '2.0.0'
+
 gem "faraday", ">= 0.8.4"
 gem "hashie"
 
