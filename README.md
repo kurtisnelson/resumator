@@ -1,5 +1,8 @@
 #Resumator
-[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/kurtisnelson/resumator) [![Build Status](https://secure.travis-ci.org/kurtisnelson/resumator.png?branch=master)](http://travis-ci.org/kurtisnelson/resumator)
+[![Build Status](https://secure.travis-ci.org/kurtisnelson/resumator.png)](http://travis-ci.org/kurtisnelson/resumator)
+[![Gem Version](https://badge.fury.io/rb/resumator.png)](http://badge.fury.io/rb/resumator)
+[![Code Climate](https://codeclimate.com/github/kurtisnelson/resumator.png)](https://codeclimate.com/github/kurtisnelson/resumator)
+[![Coverage Status](https://coveralls.io/repos/kurtisnelson/resumator/badge.png?branch=master)](https://coveralls.io/r/kurtisnelson/resumator)
 [Documentation](http://rubydoc.info/gems/resumator-client/)
 
 Communicates with the resumator API
