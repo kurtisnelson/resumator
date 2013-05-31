@@ -1,11 +1,12 @@
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
-require 'simplecov'
-SimpleCov.start
+require 'coveralls'
+Coveralls.wear!
 require 'pry'
 require 'rspec'
-require 'resumator-client'
 require 'vcr'
+
+require 'resumator'
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
