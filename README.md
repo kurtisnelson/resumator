@@ -3,6 +3,7 @@
 [![Gem Version](https://badge.fury.io/rb/resumator.png)](http://badge.fury.io/rb/resumator)
 [![Code Climate](https://codeclimate.com/github/kurtisnelson/resumator.png)](https://codeclimate.com/github/kurtisnelson/resumator)
 [![Coverage Status](https://coveralls.io/repos/kurtisnelson/resumator/badge.png?branch=master)](https://coveralls.io/r/kurtisnelson/resumator)
+[![Dependency Status](https://gemnasium.com/kurtisnelson/resumator.png)](https://gemnasium.com/kurtisnelson/resumator)
 [Documentation](http://rubydoc.info/gems/resumator-client/)
 
 Communicates with the resumator API
